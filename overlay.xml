@@ -10,5 +10,6 @@
       <name>Fabio Coatti</name>
     </owner>
     <source type="git">https://github.com/cova-fe/cova-overlay.git</source>
+    <feed>https://github.com/cova-fe/cova-overlay/commits/main.atom</feed>
   </repo>
 </repositories>
