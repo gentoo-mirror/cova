@@ -3,7 +3,7 @@
 <repositories xmlns="" version="1.0">
   <repo quality="experimental" status="unofficial">
     <name>cova</name>
-    <description lang="en">Fabio Coatti Personal Overlay></description>
+    <description lang="en">Fabio Coatti Personal Overlay</description>
     <homepage>https://github.com/cova-fe/cova-overlay</homepage>
     <owner type="person">
       <email>fabio.coatti@gmail.com</email>
