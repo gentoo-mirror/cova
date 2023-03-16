@@ -1,0 +1,14 @@
+BDEPEND=dev-go/gox >=dev-lang/go-1.18 app-arch/unzip
+DEFINED_PHASES=compile install unpack
+DESCRIPTION=Task is a task runner/build tool that aims to be simpler and easier to use than, for example, GNU Make
+EAPI=8
+HOMEPAGE=https://taskfile.dev/
+INHERIT=go-module bash-completion-r1
+IUSE=bash-completion fish-completion zsh-completion
+KEYWORDS=~amd64
+LICENSE=MIT
+RESTRICT=strip
+SLOT=0
+SRC_URI=https://github.com/go-task/task/archive/refs/tags/v3.21.0.tar.gz -> go-task-3.21.0.tar.gz https://github.com/cova-fe/taskfile-deps/releases/download/v3.21.0/taskfile-v3.21.0-deps.tar.xz
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157	go-module	472b9e09c35add3a3da376330c033dec	bash-completion-r1	f5e7a020fd9c741740756aac61bf75ff
+_md5_=01a0dc0a50b60e1be26e9e15f0048feb
