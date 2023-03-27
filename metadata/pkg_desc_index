@@ -1,2 +1,2 @@
 dev-lang/opa 0.50.2: The Open Policy Agent is an open source, general-purpose policy engine
-sys-devel/go-task 3.21.0 3.22.0: Task is a task runner/build tool that aims to be simpler and easier to use than, for example, GNU Make
+sys-devel/go-task 3.21.0 3.22.0 3.23.0: Task is a task runner/build tool that aims to be simpler and easier to use than, for example, GNU Make
