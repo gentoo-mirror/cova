@@ -158,8 +158,7 @@ pkg_pretend() {
 }
 src_prepare() {
 	if use nerdfontssymbolsonly ; then
-		mv "${DISTDIR}/10-nerd-font-symbols.conf-${PV}" "${DISTDIR}/10-nerd-font-symbols.conf"
-		install -m644 "${DISTDIR}/10-nerd-font-symbols.conf" "${S}/10-nerd-font-symbols.conf" || die
+		install -m644 "${DISTDIR}/10-nerd-font-symbols.conf-${PV}" "${S}/10-nerd-font-symbols.conf" || die
 	fi
 
 	default
