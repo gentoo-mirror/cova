@@ -125,7 +125,7 @@ SRC_URI="3270?            ( "${MY_URI}/3270.zip" -> "3270-${PV}.zip" )
 	monoid?                 ( "${MY_URI}/Monoid.zip" -> "Monoid-${PV}.zip"  )
 	mononoki?               ( "${MY_URI}/Mononoki.zip" -> "Mononoki-${PV}.zip"  )
 	mplus?                  ( "${MY_URI}/MPlus.zip" -> "MPlus-${PV}.zip"  )
-	nerdfontssymbolsonly?   ( "${MY_URI}/NerdFontsSymbolsOnly.zip" -> "NerdFontsSymbolsOnly-${PV}.zip"  "${TAG_URI}/10-nerd-font-symbols.conf" )
+	nerdfontssymbolsonly?   ( "${MY_URI}/NerdFontsSymbolsOnly.zip" -> "NerdFontsSymbolsOnly-${PV}.zip"  "${TAG_URI}/10-nerd-font-symbols.conf" -> "10-nerd-font-symbols.conf-${PV}" )
 	noto?                   ( "${MY_URI}/Noto.zip" -> "Noto-${PV}.zip"  )
 	opendyslexic?           ( "${MY_URI}/OpenDyslexic.zip" -> "OpenDyslexic-${PV}.zip"  )
 	overpass?               ( "${MY_URI}/Overpass.zip" -> "Overpass-${PV}.zip"  )
@@ -158,7 +158,7 @@ pkg_pretend() {
 }
 src_prepare() {
 	if use nerdfontssymbolsonly ; then
-		install -m644 "${DISTDIR}/10-nerd-font-symbols.conf" "${S}/10-nerd-font-symbols.conf" || die
+		install -m644 "${DISTDIR}/10-nerd-font-symbols.conf-${PV}" "${S}/10-nerd-font-symbols.conf" || die
 	fi
 
 	default
