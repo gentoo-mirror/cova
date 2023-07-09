@@ -168,8 +168,8 @@ src_install() {
 	declare -A font_filetypes
 	local otf_file_number ttf_file_number
 
-	otf_file_number=$(ls ${S} | grep -i otf | wc -l)
-	ttf_file_number=$(ls ${S} | grep -i ttf | wc -l)
+	otf_file_number=$(find ${S} -regex '.*\.otf' | wc -l)
+	ttf_file_number=$(find ${S} -regex '.*\.ttf' | wc -l)
 
 	if [[ ${otf_file_number} != 0 ]]; then
 		font_filetypes[otf]=
