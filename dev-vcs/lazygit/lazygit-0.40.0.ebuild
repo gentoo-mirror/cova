@@ -8,7 +8,8 @@ inherit go-module
 DESCRIPTION="A simple terminal UI for git commands, written in Go with the gocui library"
 HOMEPAGE="https://github.com/jesseduffield/lazygit"
 SRC_URI="https://github.com/jesseduffield/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-SRC_URI+=" https://github.com/cova-fe/lazygit-deps/releases/download/v${PV}/lazygit-v${PV}-deps.tar.xz"
+BUILD_SOURCE="Gentoo-cova-overlay"
+BUILD_COMMIT="7847203"
 
 LICENSE="MIT"
 SLOT="0"
@@ -28,7 +29,7 @@ src_compile() {
 		-os=$(go env GOOS) \
 		-arch=$(go env GOARCH) \
 		-output lazygit \
-		-ldflags "-X main.version=${PV}-gentoo -X main.date=$(date -I -u)" \
+    -ldflags "-X main.version=${PV} -X main.date=$(date -I -u) -X main.commit=${BUILD_COMMIT} -X main.buildSource=${BUILD_SOURCE}" \
 		-verbose \
 		. || die
 }
