@@ -9,7 +9,7 @@ DESCRIPTION="A simple terminal UI for git commands, written in Go with the gocui
 HOMEPAGE="https://github.com/jesseduffield/lazygit"
 SRC_URI="https://github.com/jesseduffield/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 BUILD_SOURCE="Gentoo-cova-overlay"
-BUILD_COMMIT="7847203"
+BUILD_COMMIT="5e388e2"
 
 LICENSE="MIT"
 SLOT="0"
