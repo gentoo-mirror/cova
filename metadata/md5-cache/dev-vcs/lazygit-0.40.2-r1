@@ -1,0 +1,16 @@
+BDEPEND=>=dev-lang/go-1.18 app-arch/unzip
+DEFINED_PHASES=compile install unpack
+DEPEND=sys-apps/coreutils
+DESCRIPTION=A simple terminal UI for git commands, written in Go with the gocui library
+EAPI=8
+HOMEPAGE=https://github.com/jesseduffield/lazygit
+INHERIT=go-module
+IUSE=doc
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=dev-vcs/git
+RESTRICT=strip
+SLOT=0
+SRC_URI=https://github.com/jesseduffield/lazygit/archive/v0.40.2.tar.gz -> lazygit-0.40.2.tar.gz
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	862d337d98edb576796827be2c6b11ca	multilib	c19072c3cd7ac5cb21de013f7e9832e0	go-module	8624eede24936fd7666e5298e5332f22
+_md5_=cf0b712e806b06de470e2887e948d136
