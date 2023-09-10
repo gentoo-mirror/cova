@@ -1,5 +1,5 @@
 dev-lang/opa 0.55.0 0.56.0: The Open Policy Agent is an open source, general-purpose policy engine
-dev-util/stylua 0.18.0 0.18.1: A code formatter for Lua
+dev-util/stylua 0.18.1 0.18.2: A code formatter for Lua
 dev-vcs/lazygit 0.40.1 0.40.2 0.40.2-r1: A simple terminal UI for git commands, written in Go with the gocui library
 media-fonts/nerd-fonts 3.0.1-r2 3.0.2-r1: Collection of fonts that are patched to include a high number of glyphs (icons).
 sys-devel/go-task 3.28.0 3.29.1: Task is a task runner/build tool that aims to be simpler and easier to use than, for example, GNU Make
