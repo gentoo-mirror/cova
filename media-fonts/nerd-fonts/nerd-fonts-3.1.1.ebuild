@@ -25,60 +25,70 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 DIRNAME=(
-  3270
-  Agave
-  AnonymousPro
-  Arimo
-  AurulentSansMono
-  BigBlueTerminal
-  BitstreamVeraSansMono
-  CascadiaCode
-  CodeNewRoman
-  ComicShannsMono
-  Cousine
-  DaddyTimeMono
-  DejaVuSansMono
-  DroidSansMono
-  FantasqueSansMono
-  FiraCode
-  FiraMono
-  Go-Mono
-  Gohu
-  Hack
-  Hasklig
-  HeavyData
-  Hermit
-  iA-Writer
-  IBMPlexMono
-  Inconsolata
-  InconsolataGo
-  InconsolataLGC
-  Iosevka
-  IosevkaTerm
-  JetBrainsMono
-  Lekton
-  LiberationMono
-  Lilex
-  Meslo
-  Monofur
-  Monoid
-  Mononoki
-  MPlus
-  NerdFontsSymbolsOnly
-  Noto
-  OpenDyslexic
-  Overpass
-  ProFont
-  ProggyClean
-  RobotoMono
-  ShareTechMono
-  SourceCodePro
-  SpaceMono
-  Terminus
-  Tinos
-  Ubuntu
-  UbuntuMono
-  VictorMono
+	0xProto
+	3270
+	Agave
+	AnonymousPro
+	Arimo
+	AurulentSansMono
+	BigBlueTerminal
+	BitstreamVeraSansMono
+	CascadiaCode
+	CascadiaMono
+	CodeNewRoman
+	ComicShannsMono
+	CommitMono
+	Cousine
+	D2Coding
+	DaddyTimeMono
+	DejaVuSansMono
+	DroidSansMono
+	EnvyCodeR
+	FantasqueSansMono
+	FiraCode
+	FiraMono
+	GeistMono
+	Go-Mono
+	Gohu
+	Hack
+	Hasklig
+	HeavyData
+	Hermit
+	IBMPlexMono
+	Inconsolata
+	InconsolataGo
+	InconsolataLGC
+	IntelOneMono
+	Iosevka
+	IosevkaTerm
+	IosevkaTermSlab
+	JetBrainsMono
+	Lekton
+	LiberationMono
+	Lilex
+	MPlus
+	MartianMono
+	Meslo
+	MonaSpace
+	Monofur
+	Monoid
+	Mononoki
+	NerdFontsSymbolsOnly
+	Noto
+	OpenDyslexic
+	Overpass
+	ProFont
+	ProggyClean
+	RobotoMono
+	ShareTechMono
+	SourceCodePro
+	SpaceMono
+	Terminus
+	Tinos
+	Ubuntu
+	UbuntuMono
+	VictorMono
+	iA-Writer
 )
 
 IUSE_FLAGS=(${DIRNAME[*],,})
@@ -86,7 +96,8 @@ IUSE="${IUSE_FLAGS[*]}"
 
 MY_URI="https://github.com/ryanoasis/${PN}/releases/download/v${PV}"
 TAG_URI="https://github.com/ryanoasis/nerd-fonts/raw/v${PV}"
-SRC_URI="3270?            ( "${MY_URI}/3270.tar.xz" -> "3270-${PV}.tar.xz" )
+SRC_URI="0xproto?         ( "${MY_URI}/0xproto.tar.xz" -> "0xproto${PV}.tar.xz" )
+  3270?                   ( "${MY_URI}/3270.tar.xz" -> "3270-${PV}.tar.xz" )
 	agave?                  ( "${MY_URI}/Agave.tar.xz" -> "Agave-${PV}.tar.xz" )
 	anonymouspro?           ( "${MY_URI}/AnonymousPro.tar.xz" -> "AnonymousPro-${PV}.tar.xz"  )
 	arimo?                  ( "${MY_URI}/Arimo.tar.xz" -> "Arimo-${PV}.tar.xz"  )
@@ -94,16 +105,21 @@ SRC_URI="3270?            ( "${MY_URI}/3270.tar.xz" -> "3270-${PV}.tar.xz" )
 	bigblueterminal?        ( "${MY_URI}/BigBlueTerminal.tar.xz" -> "BigBlueTerminal-${PV}.tar.xz"  )
 	bitstreamverasansmono?  ( "${MY_URI}/BitstreamVeraSansMono.tar.xz" -> "BitstreamVeraSansMono-${PV}.tar.xz"  )
 	cascadiacode?           ( "${MY_URI}/CascadiaCode.tar.xz" -> "CascadiaCode-${PV}.tar.xz"  )
+	cascadiamono?           ( "${MY_URI}/CascadiaMono.tar.xz" -> "CascadiaMono-${PV}.tar.xz"  )
 	codenewroman?           ( "${MY_URI}/CodeNewRoman.tar.xz" -> "CodeNewRoman-${PV}.tar.xz"  )
 	comicshannsmono?        ( "${MY_URI}/ComicShannsMono.tar.xz" -> "ComicShannsMono-${PV}.tar.xz"  )
+	commitmono?             ( "${MY_URI}/CommitMono.tar.xz" -> "CommitMono-${PV}.tar.xz"  )
 	cousine?                ( "${MY_URI}/Cousine.tar.xz" -> "Cousine-${PV}.tar.xz"  )
+	d2coding?               ( "${MY_URI}/D2Coding.tar.xz" -> "D2Coding-${PV}.tar.xz"  )
 	daddytimemono?          ( "${MY_URI}/DaddyTimeMono.tar.xz" -> "DaddyTimeMono-${PV}.tar.xz"  )
 	dejavusansmono?         ( "${MY_URI}/DejaVuSansMono.tar.xz" -> "DejaVuSansMono-${PV}.tar.xz"  )
 	droidsansmono?          ( "${MY_URI}/DroidSansMono.tar.xz" -> "DroidSansMono-${PV}.tar.xz"  )
+	envycoder?              ( "${MY_URI}/EnvyCodeR.tar.xz" -> "EnvyCodeR-${PV}.tar.xz"  )
 	fantasquesansmono?      ( "${MY_URI}/FantasqueSansMono.tar.xz" -> "FantasqueSansMono-${PV}.tar.xz"  )
 	firacode?               ( "${MY_URI}/FiraCode.tar.xz" -> "FiraCode-${PV}.tar.xz"  )
 	firamono?               ( "${MY_URI}/FiraMono.tar.xz" -> "FiraMono-${PV}.tar.xz"  )
 	go-mono?                ( "${MY_URI}/Go-Mono.tar.xz" -> "Go-Mono-${PV}.tar.xz"  )
+	geistmono?              ( "${MY_URI}/GeistMono.tar.xz" -> "GeistMono-${PV}.tar.xz"  )
 	gohu?                   ( "${MY_URI}/Gohu.tar.xz" -> "Gohu-${PV}.tar.xz"  )
 	hack?                   ( "${MY_URI}/Hack.tar.xz" -> "Hack-${PV}.tar.xz"  )
 	hasklig?                ( "${MY_URI}/Hasklig.tar.xz" -> "Hasklig-${PV}.tar.xz"  )
@@ -116,11 +132,15 @@ SRC_URI="3270?            ( "${MY_URI}/3270.tar.xz" -> "3270-${PV}.tar.xz" )
 	inconsolatalgc?         ( "${MY_URI}/InconsolataLGC.tar.xz" -> "InconsolataLGC-${PV}.tar.xz"  )
 	iosevka?                ( "${MY_URI}/Iosevka.tar.xz" -> "Iosevka-${PV}.tar.xz"  )
 	iosevkaterm?            ( "${MY_URI}/IosevkaTerm.tar.xz" -> "IosevkaTerm-${PV}.tar.xz"  )
+	iosevkatermslab?        ( "${MY_URI}/IosevkaTermSlab.tar.xz" -> "IosevkaTermSlab-${PV}.tar.xz"  )
+	intelonemono?           ( "${MY_URI}/IntelOneMono.tar.xz" -> "IntelOneMono-${PV}.tar.xz"  )
 	jetbrainsmono?          ( "${MY_URI}/JetBrainsMono.tar.xz" -> "JetBrainsMono-${PV}.tar.xz"  )
 	lekton?                 ( "${MY_URI}/Lekton.tar.xz" -> "Lekton-${PV}.tar.xz"  )
 	liberationmono?         ( "${MY_URI}/LiberationMono.tar.xz" -> "LiberationMono-${PV}.tar.xz"  )
 	lilex?                  ( "${MY_URI}/Lilex.tar.xz" -> "Lilex-${PV}.tar.xz"  )
+	martianmono?            ( "${MY_URI}/MartianMono.tar.xz" -> "MartianMono-${PV}.tar.xz"  )
 	meslo?                  ( "${MY_URI}/Meslo.tar.xz" -> "Meslo-${PV}.tar.xz"  )
+	monaspace?              ( "${MY_URI}/MonaSpace.tar.xz" -> "MonaSpace-${PV}.tar.xz"  )
 	monofur?                ( "${MY_URI}/Monofur.tar.xz" -> "Monofur-${PV}.tar.xz"  )
 	monoid?                 ( "${MY_URI}/Monoid.tar.xz" -> "Monoid-${PV}.tar.xz"  )
 	mononoki?               ( "${MY_URI}/Mononoki.tar.xz" -> "Mononoki-${PV}.tar.xz"  )
@@ -157,7 +177,7 @@ pkg_pretend() {
 	check-reqs_pkg_setup
 }
 src_prepare() {
-	if use nerdfontssymbolsonly ; then
+	if use nerdfontssymbolsonly; then
 		install -m644 "${DISTDIR}/10-nerd-font-symbols.conf-${PV}" "${S}/10-nerd-font-symbols.conf" || die
 	fi
 
