@@ -1,0 +1,20 @@
+# Use env GOFLAG if not empty
+
+diff -urN a/Makefile b/Makefile
+--- a/Makefile	2023-11-30 16:17:55.000000000 +0100
++++ b/Makefile	2023-12-06 09:55:55.597276513 +0100
+@@ -6,12 +6,13 @@
+ 
+ CGO_ENABLED ?= 1
+ WASM_ENABLED ?= 1
++GOFLAGS ?= "-buildmode=exe"
+ 
+ # See https://golang.org/cmd/go/#hdr-Build_modes:
+ # > -buildmode=exe
+ # > Build the listed main packages and everything they import into
+ # > executables. Packages not named main are ignored.
+-GO := CGO_ENABLED=$(CGO_ENABLED) GOFLAGS="-buildmode=exe" go
++GO := CGO_ENABLED=$(CGO_ENABLED) GOFLAGS="$(GOFLAGS)" go
+ GO_TEST_TIMEOUT := -timeout 30m
+ 
+ GOVERSION ?= $(shell cat ./.go-version)

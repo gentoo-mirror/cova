@@ -8,6 +8,8 @@
 EAPI=8
 inherit go-module bash-completion-r1
 
+IUSE="vanilla"
+
 DESCRIPTION="The Open Policy Agent is an open source, general-purpose policy engine"
 HOMEPAGE="https://www.openpolicyagent.org/"
 
@@ -17,14 +19,19 @@ KEYWORDS="~amd64"
 LICENSE="Apache-2.0"
 SLOT="0"
 
-#RESTRICT="test"
-
+PATCHES=(
+	${FILESDIR}/GOFLAGS.patch
+)
 
 src_compile() {
+	if use vanilla; then
+		GOFLAGS=""
+		CGO_LDFLAGS=""
+	fi
 	make build
 	mv opa_linux_amd64 opa
 }
 
 src_install() {
- 	dobin opa
+	dobin opa
 }
