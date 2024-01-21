@@ -1,5 +1,5 @@
 dev-lang/opa 0.58.0 0.59.0-r1 0.60.0: The Open Policy Agent is an open source, general-purpose policy engine
-dev-util/stylua 0.18.1 0.18.2 0.19.1: A code formatter for Lua
+dev-util/stylua 0.19.1 0.20.0: A code formatter for Lua
 dev-util/tflint 0.50.0 0.50.1: A Pluggable Terraform Linter
 dev-vcs/lazygit 0.40.1 0.40.2 0.40.2-r1: A simple terminal UI for git commands, written in Go with the gocui library
 media-fonts/nerd-fonts 3.0.2-r1 3.1.0 3.1.1: Collection of fonts that are patched to include a high number of glyphs (icons).
